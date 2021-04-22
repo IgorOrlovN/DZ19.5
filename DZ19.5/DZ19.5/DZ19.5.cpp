@@ -4,7 +4,7 @@
 class Animal
 {
 public:
-    void Voice()
+    virtual void Voice()
     {
         std::cout << "Animal";
     }
@@ -12,21 +12,21 @@ public:
 class Dog:public Animal
 {
 public:
-    void Voice()
+    void Voice() override
     {
-        std::cout << "Woof";
+        std::cout << "Woof ";
     }
 };
 class Cat :public Animal
 {
-    void Voice()
+    void Voice() override
     {
-        std::cout << "Meow";
+        std::cout << "Meow ";
     }
 };
 class Cow :public Animal
 {
-    void Voice()
+    void Voice() override
     {
         std::cout << "Muuu";
     }
@@ -34,8 +34,20 @@ class Cow :public Animal
 
 int main()
 {
+    const int size = 3;
+    Animal* array[size];
     Dog* p = new Dog;
-    p->Voice();
+    array[0] = p;
+    Cat* c = new Cat;
+    array[1] = c;
+    Cow* b = new Cow;
+    array[2] = b;
+    for (int i = 0; i < size; i++)
+    {
+        void Voice();
+    }
+
+
 }
 
 
