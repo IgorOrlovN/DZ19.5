@@ -8,7 +8,11 @@ public:
     {
         std::cout << "Animal";
     }
-    virtual ~Animal() { Voice(); }
+    virtual ~Animal()
+    {
+        std::cout << "Animal destruction ";
+    } 
+
 };
 class Dog:public Animal
 {
@@ -17,21 +21,35 @@ public:
     {
         std::cout << "Woof ";
     }
-};
+    ~Dog()
+    {
+        std::cout << "Dog destruction ";
+    }
+  
+};  
 class Cat :public Animal
 {
     void Voice() override
     {
         std::cout << "Meow ";
     }
+    ~Cat()
+    {
+         std::cout << "Cat destruction ";
+    }
 };
 class Cow :public Animal
 {
     void Voice() override
     {
-        std::cout << "Muuu";
+        std::cout << "Muuu ";
+    }
+    ~Cow()
+    {
+        std::cout << "Cow destruction ";
     }
 };
+
 
 int main()
 {
