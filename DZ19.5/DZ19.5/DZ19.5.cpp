@@ -8,6 +8,7 @@ public:
     {
         std::cout << "Animal";
     }
+    virtual ~Animal() { Voice(); }
 };
 class Dog:public Animal
 {
