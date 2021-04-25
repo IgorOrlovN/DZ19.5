@@ -38,13 +38,16 @@ int main()
     Animal* array[size];
     Dog* p = new Dog;
     array[0] = p;
+    delete p;
     Cat* c = new Cat;
     array[1] = c;
+    delete c;
     Cow* b = new Cow;
     array[2] = b;
+    delete b;
     for (int i = 0; i < size; i++)
     {
-        void Voice();
+        array[i]->Voice();
     }
 
 
